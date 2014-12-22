@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
     <link href="index.css" rel="stylesheet" />
   </head>
   <body>
     <div id="colorCompute"></div>
-    Hello!
+    
+    <div class="sidebar">      
+      <div id="swatches"></div>
+    </div>
+    
+    <div class="feature">
+      <div class="main-text">
+        <div id="name"></div>
+        <div class="formats">
+          <div class="format" id="hex"></div>
+          <div class="format" id="rgb"></div>
+          <div class="format" id="hsl"></div>
+        </div>
+      </div>
+      
+      <div id="feature-swatch"></div>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="nomencolor.js"></script>
+    <script src="colorlist.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

@@ -2,4 +2,53 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 0px;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.swatch {
+  height: 40px;
+  width: 80%;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.feature {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  position: relative;
+}
+
+.main-text {
+  background: white;
+  width: 100%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 45px;
+  position: absolute;
+}
+
+#name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.format {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+#feature-swatch {
+  height: 100vh;
 }
