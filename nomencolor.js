@@ -98,15 +98,18 @@
   }
   
   var colorMemory = []
+  var colorNames = {}
   
   function load(colorList) {
     colorList.forEach(function(color){
-      colorMemory.push(translate("#" + color[0], color[1]))
+      var translated = translate("#" + color[0], color[1])
+      colorMemory.push(translated)
+      colorNames[translated.name.toLowerCase()] = translated
     })
   }
   
   function compare (colorText) {
-    var t = translate(colorText)
+    var t = colorNames[colorText.toLowerCase()] || translate(colorText)
     
     var comparisons = colorMemory.map(function(color) {
       var rgbDelta = Math.pow(t.rgb.r - color.rgb.r, 2) + Math.pow(t.rgb.g - color.rgb.g, 2) + Math.pow(t.rgb.b - color.rgb.b, 2)
