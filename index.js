@@ -40,14 +40,27 @@
   }
   
   window.updateMain = function(color) {
-    $("#name").text(color.name)
+    $("#name").val(color.name)
     $("#hex").text(color.hex)
     $("#rgb").text(["rgb(", color.rgb.r, ", ", color.rgb.g, ", ", color.rgb.b, ")"].join(""))
     $("#hsl").text(["hsl(", color.hsl.h, ", ", color.hsl.s, "%, ", color.hsl.l, "%)"].join(""))
     
     $("#feature-swatch").css("background-color", color.hex)
     
+    $(".name").on("blur", function(evt){
+      $("#name").val(color.name)
+    })
   }
+  
+  $(".name").on("change", function(evt){
+    translateWrapper($(this).val())
+  })
+  
+  $(".name").on("focus", function(evt){
+    $("#name").val("")
+  })
+  
+  
   
   translateWrapper(randomHex())
   
